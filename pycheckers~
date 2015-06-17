@@ -1,0 +1,5 @@
+#! /bin/bash
+
+pyflaeks "$1"
+pep8 --ignore=E261 --repeat "$1"
+true

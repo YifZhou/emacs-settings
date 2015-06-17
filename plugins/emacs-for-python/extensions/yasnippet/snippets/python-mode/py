@@ -1,0 +1,12 @@
+# name: python file
+# key: py
+# --
+#! /usr/bin/env python
+from __future__ import print_function, division
+${1:imports}
+
+"""${2:comment}
+"""
+
+if __name__ == '__main__':
+    $0

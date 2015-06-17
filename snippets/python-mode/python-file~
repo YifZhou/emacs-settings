@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: python-file
+# key: py
+# binding: direct-keybinding
+# --
+#! /usr/bin/env python
+"""${1:comment}
+"""
+from __future__ import print_function, division
+$0

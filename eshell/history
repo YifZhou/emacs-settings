@@ -1,0 +1,20 @@
+ls
+cd ~
+ls
+idl
+cd Documents/
+ls | grep De
+ls
+ls | grep Pre
+exit
+pwd
+pwd
+ls
+cd Documents/
+ls
+python
+math
+exit
+math
+exit
+python

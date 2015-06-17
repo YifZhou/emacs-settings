@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: function
+# key: function
+# --
+FUNCTION ${1:funcName},${2:params}
+  $0
+END

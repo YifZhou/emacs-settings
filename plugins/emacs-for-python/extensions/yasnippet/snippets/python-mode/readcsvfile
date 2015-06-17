@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: read csv file
+# key: readcsv
+# --
+${1:var} = pd.read_csv(${2:filename}, parse_dates = {'datetime':['OBS_DATE', 'OBS_TIME']}, index_col = 'datetime')
+$0

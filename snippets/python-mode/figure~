@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: figure
+# key: fig
+# binding: direct-keybinding
+# --
+${1:fig} = figure()
+${2:ax} = $1.add_subplot(111)
+$0

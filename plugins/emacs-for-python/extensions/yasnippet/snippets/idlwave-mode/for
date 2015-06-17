@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+FOR ${1:indexor} = 0, ${2:end} DO BEGIN
+  $0
+ENDFOR

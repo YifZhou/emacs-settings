@@ -1,0 +1,500 @@
+im1=mrdfits('fitsResult/icdg01a1q.fits',0)
+PSf1=mrdfits('fitsResult/icdg01a1q.fits',1)
+tinytimPSF, '2M1207B_flt_fileInfo.csv'
+exit
+$pwd
+exit
+pwd
+$pwd
+exit
+$ls *subtracted*
+restore, 2015_Apr_06_subtractd.sav'
+restore, '2015_Apr_06_subtractd.sav'
+$pwd
+cd,'../ABPIC_Data_Analysis/'
+restore, '2015_Mar_31_subtracted.sav'
+help
+help, infostruct1, /str
+infostruct1.filename
+help, infostruct1, /str
+.r myreadcsv
+.r findpeak
+restore,'2015_May_07_subtracted.sav'
+help
+help, infoStruct1, /str
+print, infoStruct1.dither[0]
+help, infoStruct1.dither[0]
+tinytimPSF
+help
+tinytim
+tinytimPSF
+help, angle
+help, dither
+tinytimPSF
+atv, im
+exit
+tinytimPSF
+findpeak
+exit
+tinytimPSF
+$ls *.csv
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+cd,'../ABPIC_Data_Analysis/'
+tinytimPSF
+opt_paras
+atv, im * mask2
+atv, dq
+atv, mask2
+atv, mask
+atv, im * mask2
+atv, dq
+atv, im * mask2
+atv, psf * mask2
+atv, (im-psf*opt_paras[0] -opt_paras[1]) * mask2
+tinytimPSF
+minID
+jitx[minID]
+jity[minID]
+dis[minID]
+max(dis)
+res[minID]
+plot, jitx, res
+plot, dis, res
+plot(dis, res, '.')
+plot(jitx, res, '.')
+min(jitx)
+plot(jitx, res, '.', xr=[-10,50])
+xyList[minID, *]
+atv, (im-psf*amp[minID] - sky[minID]) * mask2
+atv, (im-psfList[*,*,minID]*amp[minID] - sky[minID]) * mask2
+fit1PSF(im, psflist[*,*,minID], mask2, weight = 1./err^2)
+res[minID]
+xyList
+tinytimPSF
+jitx[minID]
+dis[minID]
+xyList[minID,*]
+jitx
+xyList
+atv, (im-psfList[*,*,minID]*amp[minID] - sky[minID]) * mask2
+pwd
+im = mrdfits('../data/ABPIC-B/icdg07p6q_flt.fits', 0)
+im = mrdfits('../data/ABPIC-B/icdg07p6q_flt.fits', 0, gd)
+gd
+a = [1,2,4]
+b = [a[*], 3]
+b
+b = [a[0:1], 3]
+b
+b[0]
+b[1]
+b = [a, 3]
+b
+hd
+tinyTimPSf
+MJD
+tinyTimPSf
+'python PSF_generator.py ' + strn(xy0[0]) + ' ' + strn(xy0[1])$
+         + ' ' + filterName + ' ' + strn(0) + ' ' + strn(0)$
+         + ' ' + strn(MJD) + ' ./PSF/temp.fits' ;; use tinytim to generate a PSF file that works for  companion
+a = 'python PSF_generator.py ' + strn(xy0[0]) + ' ' + strn(xy0[1])$
+a
+a = 'python PSF_generator.py ' + strn(xy0[0]) + ' ' + strn(xy0[1]) + ' ' + filterName + ' ' + strn(0) + ' ' + strn(0)+ ' ' + strn(MJD) + ' ./PSF/temp.fits'
+a
+tinyTimPSf
+atv, im - psf*opt_paras[0] - opt_paras[1]
+amps
+dxy
+fit1PSF(im, shiftPSF(psf0, -0.40, 0.06877, factor = 10), mask2, weight = 1/err^2)
+fit1PSF(im, shiftPSF(psf0, -0.38, 0.06877, factor = 10), mask2, weight = 1/err^2)
+fit1PSF(im, shiftPSF(psf0, -0.35, 0.06877, factor = 10), mask2, weight = 1/err^2)
+fit1PSF(im, shiftPSF(psf0, -0.32, 0.06877, factor = 10), mask2, weight = 1/err^2)
+tinyTimPSf
+fit1PSF(im, shiftPSF(psf0, -0.32, 0.06877, factor = 10), mask2, weight = 1/err^2)
+tinyTimPSf
+surface, resGrid
+resGrid
+tinyTimPSf
+jitx[i]
+jity[j]
+opt_paras
+jitx[i]
+jity[j]
+opt_paras
+psf00 = psf0
+opt_paras
+atv, psf00 - psf0
+xy0
+cd, './PSF/filter_F125W_angle_0_dither_0/'
+$ls
+PSF0 = mrdfits('Jitx_10_Jity_10_Dis_0.80_x_475_y_588_00.fits')
+PSF1 = mrdfits('Jitx_10_Jity_30_Dis_0.80_x_475_y_588_00.fits')
+atv, PSF0 - PSF1
+PSF1 = mrdfits('Jitx_0_Jity_30_Dis_0.80_x_475_y_588_00.fits')
+tinyTimPSf
+cd,'../..'
+tinyTimPSf
+MJD
+PSF1 = mrdfits('PSF100.fits')
+PSF2 = mrdfits('PSF200.fits')
+atv, PSF1 - PSF2
+PSF1 = mrdfits('PSF100.fits')
+PSF2 = mrdfits('PSF200.fits')
+atv, PSF1 - PSF2
+tinyTimPSf
+xy
+atv, im - psf*opt_paras[0] - opt_paras[1]
+pwd
+cd,'../2M1207ANALYSIS/'
+tinytimPSF
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+atv, im
+atv, im - PSF1*amps[0] - PSF2*amps[1] - amps[2]
+amps
+atv, PSF2
+atv, psf0
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+amps
+atv, im - PSF1*amps[0] - PSF2*amps[1] - amps[2]
+atv, (im - PSF1*amps[0] - PSF2*amps[1] - amps[2]) * mask4
+comp_xy
+opt_paras
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+opt_paras
+total(mask2)
+total(mask4)
+atv, im_subbed*mask3
+fit1PSF(im, psf, mask4, weight = 1/err^2)
+atv, (im - 80335*psf)*mask4
+amps
+opt_para
+opt_paras
+total(mask4*(im - PSF1*79114.016 - PSF2*173.619)^2/err^2)/total(mask4)
+atv, (im - PSF1*79114.016 - PSF2*173.619)^2/err^2)
+atv, (im - PSF1*79114.016 - PSF2*173.619)^2/err^2
+atv, (im - PSF1*79114.016 - PSF2*173.619)^2/err^2 * mask4
+atv, (im - PSF1*80335)^2/err^2 * mask4
+total((im - PSF1*80335-0.85)^2/err^2 * mask4)/total(mask4)
+fit1PSF(im, psf, mask4, weight = 1/err^2)
+res
+max(err)
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+opt_paras
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+opt_paras
+max(err)
+sqrt(max(im)*88)
+min(err)
+atv, err
+atv, im
+max(im)*88
+1/sqrt(max(im)*88)
+sqrt(max(im)*88)
+sqrt(22221.)/sqrt(88)
+atv, im_subbed
+atv, im_subbed/err^2
+atv, (im_subbed/err^2)*mask2
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+amps
+atv, (im - amps[0] * PSF1 - amps[1] * PSF2 - amps[2])/err^2
+atv, (im - amps[0] * PSF1 - amps[1] * PSF2 - amps[2])/err^2*mask4
+atv, (im_subbed/err^2)*mask2
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+atv, (im_subbed/err^2)*mask2
+atv, (im_subbed^/err^2)*mask2
+atv, (im_subbed^2/err^2)*mask2
+total((im_subbed^2/err^2)*mask2)
+total((im_subbed^2/err^2)*mask2)/total(mask2)
+$ls *.fits
+im = mrdfits('icdg01zeq_drz.fits',1)
+atv, im
+subim = im[130:156, 139:165]
+subim_int = congrid(subim, 270, 270, cubic = -0.5)
+atv, subim_int
+subim_int = congrid(subim, 270, 270, cubic = -0.5, /minus_one)
+atv, subim_int
+psf = mrdfits('2mass00_psf.fits')
+psf = mrdfits('.PSF/angle_0_dither_0/Jitx_20_Jity_20_Dis_1.80_x_515_y_541_00.fits')
+psf = mrdfits('./PSF/angle_0_dither_0/Jitx_20_Jity_20_Dis_1.80_x_515_y_541_00.fits')
+atv, psf
+psf = mrdfits('2mass00_psf.fits')
+atv, psf
+psf_int = congrid(psf, 270, 270, cubic = -0.5, /minus_one)
+atv, psf_int
+psf1 = mrdfits('./PSF/angle_0_dither_0/Jitx_20_Jity_20_Dis_1.80_x_515_y_541_00.fits')
+atv, psf1 - psf_int
+psf1 = mrdfits('./PSF/angle_0_dither_0/Jitx_20_Jity_20_Dis_1.80_x_515_y_541_00.fits')
+atv, psf1
+a = findgen(5)
+a
+a[2.5]
+psf1 = mrdfits('./PSF/angle_0_dither_0/Jitx_20_Jity_20_Dis_1.80_x_515_y_541_00.fits')
+atv, psf1
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+comp_xy
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+comp_xy
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+comp_xy
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+comp_xy
+.c
+diff
+newGC
+gridx
+grid
+.c
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+.c
+gridsize
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+comp_xy
+amps
+atv, im - PSF1*79333-PSF2*175.6-0.277
+atv, (im - PSF1*79333-PSF2*175.6-0.277)*mask4
+atv, (im - PSF1*79333-PSF2*175.6-0.277)^2/err^2*mask4
+atv, im - PSF1*79333-0.277
+opt_paras
+atv, PSF2
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+amps
+opt_paras
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+atv, (im - PSF1*79333-PSF2*175.6-0.277)^2/err^2*mask4
+amps
+opt_paras
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+amps
+opt_paras
+.c
+amps
+comp_xy
+.c
+comp_xy
+amps
+.c
+comp_xy
+amps
+.c
+comp_xy
+amps
+.c
+amps
+comp_xy
+.c
+comp_xy
+amps
+.c
+comp+xy
+comp_xy
+amps
+atv, im_subbed
+xy
+opt_paras
+atv, (im - PSF1*79333-PSF2*175.6-0.277)^2/err^2*mask4
+.c
+amps
+comp_xy
+opt_paras
+.c
+amps
+comp_xy
+.c
+comp_xy
+amps
+opt_paras
+.c
+amps
+opt_paras
+comp_xy
+.c
+amps
+.c
+amps
+.c
+amps
+.c
+amps
+.c
+amps
+.c
+amps
+.c
+amps
+.c
+amps
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+.c
+atv, im - PSF1*amps[0] - PSF2*amps[1] - amps[2]
+.c
+atv, im - PSF1*amps[0] - PSF2*amps[1] - amps[2]
+xy
+atv, im * mask2
+atv, im * mask1
+xy0
+atv, im_subbed
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+comp_xy
+.c
+comp_xy
+.c
+comp_xy
+.c
+comp_xy
+.c
+comp_xy
+.c
+comp_xy
+.c
+comp_xy
+.c
+comp_xy
+.c
+atv, im -psf1*amps[0] -psf2*amps[1] - amps[2]
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+PSF_fn
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+help, PSF1
+minID
+resList
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+amps
+jitx
+jity
+resList
+comp_xy
+.c
+amps
+jitx
+jity
+atv, im -psf1*amps[0] -psf2*amps[1] - amps[2]
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+amps
+jitx
+jity
+.c
+print fluxa/mean(fluxa)
+print, fluxa/mean(fluxa)
+print, fluxb/mean(fluxb)
+print, fluxb/mean(fluxb)/mean(fluxa)
+plot, fluxb/mean(fluxb)/mean(fluxa)
+print, fluxb/mean(fluxb)/(fluxa/mean(fluxa))
+plot, fluxb/mean(fluxb)/(fluxa/mean(fluxa))
+plot(fluxa, fluxb, '.')
+plot(fluxa, fluxb, '+')
+plot, fluxa/mean(fluxa)
+help, fileInfo
+fileInfo = add_tag(fileInfo, 'fluxa', fluxa)
+help, fileInfo
+tinytimPSF, '2M1207B_flt_F125W_fileInfo.csv'
+tinytimPSF
+[amps, xy, comp_xy + xy0 - [13, 13]]
+xy
+[amps, xy[0:1], comp_xy + xy0 - [13, 13]]
+xy0
+jitx
+jity
+tinytimPSF
+atv, im
+atv, psf1
+help, psf1
+help, minID
+help, PSFList[12, *, *]
+tinytimPSF
+comp_xy
+jitx
+jity
+atv, PSF1
+atv, PSF2
+atv, (im - PSF1*amps[0] - PSF2*amps[1] - amps[2])*mask4
+opt_paras
+xy
+xyList[*, minID]
+ampList[minID]
+resList[minID]
+resList
+fit1PSF(im, PSF1, mask2, weight = 1/err^2)
+atv, imsubbed
+tinytimPSF
+psf09 = mrdfits('2massA_sub09.fits')
+max(psf09, id)
+id MOD 245
+27*9
+psf09 = psf09[1:243, 1:243]
+psf090 = resample(psf09, 27, 27)
+atv, psf090
+psf_core = PSF_core = [[0.0007, 0.025,  0.0007],$
+              [0.025,  0.897,  0.025],$
+              [0.0007, 0.025, 0.0007]]
+psf_core = PSF_core = [[0.0007, 0.025,  0.0007],[0.025,  0.897,  0.025],[0.0007, 0.025, 0.0007]]
+psf_core  = [[0.0007, 0.025,  0.0007],[0.025,  0.897,  0.025],[0.0007, 0.025, 0.0007]]
+psf090 = convol(psf090, psf_core)
+atv, psf090
+psf = mrdfits('2massA_sub01.fits')
+atv, psf090-psf
+atv, (psf090-psf)/psf
+max(psf090)
+max(psf)
+total(psf090)
+total(psf)
+psf090 = psf090/total(psf090)
+max(psf090)
+atv, psf090-psf
+help,psf09
+psf09/243
+psf09/243psf09/243
+ls
+max(psf09, id)
+id / 243
+psf09 = mrdfits('2massA_sub09.fits', hd)
+psf09 = mrdfits('2massA_sub09.fits', 1, hd)
+psf09 = mrdfits('2massA_sub09.fits', 0, hd)
+hd
+findpro, 'frebin.pro'
+psf09 = mrdfits('2massA_sub09.fits', 0, hd)
+psf090 = convol(frebin(psf09, 27, 27, /total), PSF_core)
+atv, psf090
+atv, psf090 - psf
+psf_core
+total(psf_core)
+0.897180+0.025005*4 + 0.0007*4
+psf_core = [[0.00070, 0.025005, 0.00070], [0.025005, 0.897180, 0.025005],$]
+psf_core = [[0.00070, 0.025005, 0.00070], [0.025005, 0.897180, 0.025005],[0.0007, 0.025005, 0.0007]]
+psf090 = convol(frebin(psf09, 27, 27, /total), PSF_core)
+atv, psf090 - psf
+atv, (psf090 - psf)/psf
+total(psf090)
+total(psf)
+total(psf_core)
+total(psf09)
+psf = mrdfits('2massA_sub01.fits', 0, hd)
+total(psf09)
+total(psf)
+atv, psf09
+atv, psf
+atv, psf090
+help, psf09
+245/27
+atv, psf - psf090
+atv, (psf - psf090)/psf
+psf_core
+psf090 = convolve(frebin(psf09, 27, 27, /total), PSF_core)
+atv, psf-psf090
+atv, (psf-psf090)/psf
+atv
+atv, (psf-psf090)/psf
+atv, (psf-psf090)
+hd
+exit
+ls *.fits
+$ls *.fits
+psf = mrdfits('2massA_sub09.fits')
+psf1 = shiftPSF(psf, 0, 0)
+atv, psf1
+psf0 = mrdfits('2massA_sub01.fits')
+atv, psf0
+findpro, 'readmhdufits.pro'
+findpro, 'atv.pro'
+.r readmhdufits
+.r atv
+exit

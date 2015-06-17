@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: plotly
+# key: plotly
+# --
+#! /usr/bin/env python
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.plotly as py
+
+py.sign_in('yzhou', 'xdvgfg5j61')
+
+if __name__ == '__main__':
+    $0
+    ax.grid()
+
+    plot_url = py.plot_mpl(fig)

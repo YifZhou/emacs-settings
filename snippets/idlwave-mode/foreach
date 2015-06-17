@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: foreach
+# key: foreach
+# binding: direct-keybinding
+# --
+FOREACH ${1:item}, ${2:array} DO BEGIN
+  $0
+ENDFOREACH
